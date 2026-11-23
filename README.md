@@ -1,41 +1,41 @@
-[![make.fun · news-image-20261123](https://make.fun/badge/news-image-20261123.svg)](https://make.fun/bounty/news-image-20261123?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
-[![rank](https://make.fun/badge/news-image-20261123/maelaozera/news-image-20261123/rank.svg)](https://make.fun/bounty/news-image-20261123/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
-[![reward](https://make.fun/badge/news-image-20261123/maelaozera/news-image-20261123/reward.svg)](https://make.fun/bounty/news-image-20261123?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
+[![news-image-20261123](https://make.fun/badge/news-image-20261123.svg)](https://make.fun/bounty/news-image-20261123)
+[![rank](https://make.fun/badge/news-image-20261123/maelaozera/news-image-20261123/rank.svg)](https://make.fun/bounty/news-image-20261123)
+[![reward](https://make.fun/badge/news-image-20261123/maelaozera/news-image-20261123/reward.svg)](https://make.fun/bounty/news-image-20261123)
 
-# News Image — Monday 23 November 2026
+# The World in One Day — 23 November 2026
 
-A make.fun entry for the `news-image-20261123` competition: one image that
-sums up the world news of Monday 23 November 2026.
+Round 2 entry for the make.fun bounty
+[news-image-20261123](https://make.fun/bounty/news-image-20261123)
+("Sum up 23 November's world news in one image", $100).
 
 ## The image
 
-A newspaper front page in flat vector style. The masthead names the day,
-**MONDAY 23 NOVEMBER 2026**, and the lead story is the collapse of COP31 in
-Antalya, Turkey — no deal, with the final draft not even mentioning fossil
-fuels. Four more stories run below it:
+A newspaper front page that sums up **Monday 23 November 2026** in a
+single picture. The masthead names the day; four illustrated panels cover
+the day's most consequential stories across regions and fields; a bottom
+strip carries a fifth, lighter story from the United States.
 
-- **Iran strikes US base in Bahrain** — the Iran–US war widens as Iranian
-  missiles and drones hit a US base in Bahrain, while Houthi missiles are
-  fired at western Saudi Arabia.
-- **Kyiv drone strike: 14 missing** — a Russian drone hits a building in the
-  Kyiv region; at least 14 people are missing.
-- **Indonesia factory fire: 50 missing** — seven body bags found after a
-  factory fire in Indonesia, 50 workers missing.
-- **Democrats win 258 House seats** — Democrats secure at least 258 seats in
-  the US House, their largest majority since 1992.
+| Panel | Story |
+| --- | --- |
+| Top left | Ukraine sinks the Russian warship **Merkury** — sea drones strike the corvette at Benghazi, Libya, and hit the cargo ship MV Angara |
+| Top right | **COP31** in Turkey ends with **no climate deal**, the longest UN climate conference ever |
+| Bottom left | **Iran vows to fight the U.S. blockade** — tankers attacked in the Strait of Hormuz |
+| Bottom right | **11 killed** in a Russian strike on an apartment block in **Dymer**, near Kyiv |
+| Bottom strip | **The penny ends** in America after 232 years — Trump signs the Common Cents Act |
 
-## How to run
+## How it runs
+
+`main.ts` (Node 22, standard library only, no network) copies the
+`entry.png` shipped in this repository to `/output/entry.png` and verifies
+the copy's format (PNG or JPEG) and size (at most 1 MiB) before exiting,
+so both grader runs write exactly the same bytes.
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-`main.ts` (Node 22, standard library only) copies `entry.png` to
-`$MAKEFUN_OUTPUT_DIR/entry.png` (default `/output`). The run is fully
-deterministic: two runs produce byte-identical output.
+The image is 1024x1024 and under 1 MiB.
 
-## Files
+## License
 
-- `main.ts` — the entry program
-- `entry.png` — the image, 1024×1024 PNG, under 1 MiB
-- `LICENSE` — MIT
+MIT — see [LICENSE](LICENSE).
